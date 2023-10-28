@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site soledge one_page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script> 
+</head>
+<body>
+    <div class="real"></div>
+    <header>
+        <div class="logo"><p><span>S</span>oledge<span>.</span.></p></div>
+        <div class="menu">
+            <ul class="menu_list">
+                <li><a href="#">portefolio</a></li>
+                <li><a href="#">story</a></li>
+                <li><a href="#">team</a></li>
+                <li><a href="#">carrers</a></li>
+                <li><a href="#">talent</a></li>
+            </ul>
+        </div>
+     
+    </header>
+    <main>
+        <h1 class="title">
+            GREATNESS LIES IN <br>OUR INTELLIGENCE
+        </h1>
+        <section class="img_title">
+            <img src="img1.jpg"></img>
+              <div class="text_box">
+                <h2>SOLEDGE</h2>
+            </div>
+        </section>
+     <section class="bande_container">
+        <div class="bande">
+           <p>SOLEDGE, ENTREPRISE DU FUTUR&nbsp;</p>
+           <p>SOLDEGE, DEVELOPPEMENT DE SOFTWARE INGENERIE&nbsp;</p>
+        </div>
+     </section>
+     <section class="images">
+        <img src="" alt="">
+     </section>
+    </main>
+    <footer>
+        <p> Tous les droits sont réservés</p>
+    </footer>
+    <script>
+        let menuBtn = document.querySelector('.menu')
+        let menu_list = document.querySelector('.menu_list')
+        menuBtn.onclick = function(){
+            menuBtn.classList.toggle("cross");
+            menu_list.classList.toggle("show_menu")
+        }
+    
+        const duration = 1;
+
+        // Sélectionnez les éléments que vous souhaitez animer
+        const logo = document.querySelector('.logo');
+        const menu = document.querySelector('.menu');
+        const title = document.querySelector('.title');
+        const imgTitle = document.querySelector('.img_title');
+        const bande = document.querySelector('.bande');
+   
+
+        // Masquez les éléments jusqu'à ce qu'ils soient prêts à être animés
+        logo.style.opacity = 0;
+        menu.style.opacity = 0;
+        title.style.opacity = 0;
+        imgTitle.style.opacity = 0;
+        bande.style.opacity = 0;
+
+        // Utilisez la méthode gsap.fromTo() pour animer les éléments sélectionnés
+        gsap.fromTo(logo, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, duration: duration, delay: duration * 0.5, ease: "power1.out"});
+        gsap.fromTo(menu, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, duration: duration, delay: duration * 1, ease: "power1.out"});
+        gsap.fromTo(title, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, duration: duration, delay: duration * 1.5, ease: "power1.out"});
+        gsap.fromTo(imgTitle, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, duration: duration, delay: duration * 2, ease: "power1.out"});
+        gsap.fromTo(bande, {y: "100%", opacity: 0}, {y: "0%", opacity: 1, duration: duration, delay: duration * 3, ease: "power1.out"});
+
+    </script>
+   
+    
+</body>
+</html>
+
